@@ -8,8 +8,8 @@ const CategoryProducts = () => {
       <p className='flex self-start text-lg font-bold'>Etalase Toko ({dataCategory.length})</p>
       {
         dataCategory.map((category, index) => (
-          <span className='flex flex-col w-64'>
-            <button key={index} className='text-left text-lg bg-transparent py-1 pl-3 hover:font-bold hover:bg-gray-100 hover:rounded-lg'>{category.title}</button>
+          <span key={index} className='flex flex-col w-64'>
+            <button className='text-left text-lg bg-transparent py-1 pl-3 hover:font-bold hover:bg-gray-100 hover:rounded-lg'>{category.title}</button>
           </span>
         ))
       }

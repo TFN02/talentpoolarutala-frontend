@@ -10,7 +10,7 @@ const ProductItems = ({ id, product_name, price, img_product, rating, jml_terjua
             <Link to={`/detail-product/${id}`}>
                 <img className='rounded-t-md' src={img_product} alt="foto produk" />
                 <div className="card-body p-2">
-                    <p className='text-sm text-left font-semibold h-8'>{product_name}</p>
+                    <p className='text-sm text-left font-semibold h-9 line-clamp-2'>{product_name}</p>
                     <p className='font-bold text-lg text-left'>Rp {price}</p>
 
                     {rating !== 0 && (

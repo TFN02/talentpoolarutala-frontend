@@ -1,28 +1,40 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs';
-import axios from 'axios';
+import DescriptionBox from '../components/DescriptionBox';
+import ChekoutBox from '../components/ChekoutBox';
+import { useProductContext } from '../ProductContext';
 
 const DetailProduct = () => {
-    const id = useParams().id;
-    const [detail, setDetail] = useState([]);
-    console.log("idnya:", id);
+    const { products, updateProduct } = useProductContext();
+    const { id } = useParams();
+  
+    const detail = products.find((product) => product.id === id);
+  
+    if (!detail) {
+      return <div>Loading...</div>;
+    }
 
-    useEffect(() => {
-        axios.get(`https://62bd8e8dbac21839b605f865.mockapi.io/products/${id}`)
-            .then((response) => {
-                console.log(response.data);
-                setDetail(response.data);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    }, []);
+    const handleAddToCart = () => {
+        const updatedDetail = { ...detail, isCart: true };
+        updateProduct(updatedDetail);
+      };
+    
 
     return (
-        <section>
+        <section className='relative px-10'>
             <Breadcrumbs productName={detail.product_name} />
+            <div className='grid grid-cols-3 gap-x-5'>
+                <img className='fixed w-72 mt-6 rounded-lg' src={detail.img_product} alt="" />
+                <div className='absolute left-1/2 transform -translate-x-1/2 py-6'> 
+                    <DescriptionBox detailData={detail} />
+                </div>
+                <div className='fixed right-20 py-5'>
+                    <ChekoutBox dataCheckout={detail} onAddToCart={handleAddToCart} />
+                </div>
+            </div>
         </section>
+
     )
 }
 

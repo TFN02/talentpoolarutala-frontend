@@ -5,22 +5,29 @@ import BerandaPage from './pages/BerandaPage'
 import UlasanPage from './pages/UlasanPage'
 import NotFound from './pages/NotFound'
 import DetailProduct from './pages/DetailProduct'
+import { ProductProvider } from './ProductContext'
+import CartPage from './pages/CartPage'
+import ListTransaction from './pages/ListTransaction'
+import DetailTransaction from './pages/DetailTransaction'
+
 
 function App() {
 
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<CatalogProduct />} />
-      <Route path='/beranda' element={<BerandaPage />} />
-      <Route path='/ulasan' element={<UlasanPage />} />
-      <Route path='/detail-product/:id' element={<DetailProduct />} />
+      <ProductProvider>
+        <Routes>
+          <Route path='/' element={<CatalogProduct />} />
+          <Route path='/beranda' element={<BerandaPage />} />
+          <Route path='/ulasan' element={<UlasanPage />} />
+          <Route path='/detail-product/:id' element={<DetailProduct />} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='/list-transaction' element={<ListTransaction />} />
+          <Route path='/list-transaction/detail' element={<DetailTransaction />} />
 
-
-
-
-      <Route path='*' element={<NotFound />} />
-    </Routes>
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </ProductProvider>
     </BrowserRouter>
   )
 }

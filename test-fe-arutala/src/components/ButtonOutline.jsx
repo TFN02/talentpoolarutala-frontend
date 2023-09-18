@@ -1,8 +1,10 @@
 import React from 'react'
 
-const ButtonOutline = ({buttonName}) => {
+const ButtonOutline = ({buttonName, className, disabled}) => {
   return (
-    <button className='btn btn-outline btn-sm px-12 normal-case text-green-600 hover:bg-green-600' >{buttonName}</button>
+    <button 
+    disabled={disabled}
+    className={`btn btn-outline btn-sm normal-case ${className}`} >{buttonName}</button>
   )
 }
 

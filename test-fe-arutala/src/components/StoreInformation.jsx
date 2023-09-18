@@ -23,8 +23,12 @@ const StoreInformation = () => {
                         </p>
 
                         <div className='flex gap-3 mt-5'>
-                            <ButtonOutline buttonName={"Following"} />
-                            <ButtonOutline buttonName={"Chat Penjual"} />
+                            <ButtonOutline 
+                            className="px-12"
+                            buttonName={"Following"} />
+                            <ButtonOutline 
+                            className="px-12"
+                            buttonName={"Chat Penjual"} />
                             <BiStore size={30} className='outline outline-gray-400 text-gray-400 p-1.5 rounded-md' />
                             <BiShareAlt size={30} className='outline outline-gray-400 text-gray-400 p-1.5 rounded-md' />
                         </div>

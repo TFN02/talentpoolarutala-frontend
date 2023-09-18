@@ -5,20 +5,10 @@ import MenuBar from '../components/MenuBar'
 import CategoryProducts from '../components/CategoryProducts'
 import ProductList from '../components/ProductList'
 import SortBar from '../components/SortBar'
+import { useProductContext } from '../ProductContext'
 
 const CatalogProduct = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    axios.get('https://62bd8e8dbac21839b605f865.mockapi.io/products')
-      .then((response) => {
-        console.log("cek data",response.data.data);
-        setProducts(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+  const { products } = useProductContext();
 
   return (
     <section>
