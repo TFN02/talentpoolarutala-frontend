@@ -1,14 +1,20 @@
-# Soal test maggang Backend engineer dengan Springboot
+# Soal test maggang Frontend engineer
 
 Berikut adalah soal/pertanyaan yang perlu dijawab oleh peserta maggang
 
 ## knowledge base
 
 1. Apa yang anda ketahui tentang Rest API?
-2. Apa yang anda ketahui tentang Server side and Client side processing?
-4. Apa yang anda ketahui tentang Design pattern Dependency Injection?
-5. Apa yang anda ketahui tentang Typescript dan Angular framework?
-6. Apa yang anda ketahui tentang Microfrontend?
+   - Cara untuk menghubungkan aplikasi melalui jaringan menggunakan HTTP. Data dikirim dan diterima dalam format seperti JSON atau XML.
+3. Apa yang anda ketahui tentang Server side and Client side processing?
+   - SSR akan merender di server sedangkan CSR akan merender di sisi client. 
+5. Apa yang anda ketahui tentang Design pattern Dependency Injection?
+   - Pola desain yang memungkinkan komponen untuk menerima dependensi dari luar, membuat komponen lebih independen, mudah diuji, dan dapat digunakan ulang. 
+7. Apa yang anda ketahui tentang Typescript dan Angular framework?
+   - TypeScript: Superset dari JavaScript dengan tipe data statis. Membuat pengembangan aplikasi web lebih aman dan terstruktur.
+   - Angular: framework javasript dengan penggunaan typescript sebagai bahasa utama.
+9. Apa yang anda ketahui tentang Microfrontend?
+    - aplikasi web dibagi menjadi modul-modul kecil yang dapat dikelola dan diterbitkan secara independen. Memudahkan pengembangan tim dan pengelolaan aplikasi yang besar. Digunakan dengan kerangka kerja seperti Single-SPA
 
 ## Design modules
 
